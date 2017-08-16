@@ -60,43 +60,47 @@ model() // all business logic of your instance
 ```
 tmp();  // templates
 ```
+
 ### Inner methods and props
 
 ```
-this.qry(element); // instead of document.querySelector(-All)
+inYouOptions(it will be this).qry(element); // instead of document.querySelector(-All)
 ```
 ```
-this.route({ // route your components
+inYouOptions(it will be this).route({ // route your components
   on: '#linkClicking', 
   show: component1, 
   hide: component2, 
   path: 'addressName'
 });
 ```
+```
+inYouOptions(it will be this).put; // entry div of instance
+```
 
 ### Public methods and props
 
 ```
-youInstance.core; // inners of instance
+YouInstance.core; // inners of instance
 ```
 ```
-youInstance.entry; // entry element of instance
+YouInstance.entry; // entry element of instance
 ```
 ```
-youInstance.entryDiv; // entry div of instance
+YouInstance.entryDiv; // entry div of instance
 ```
 ```
-die(); // kill view of the instance
+YouInstance.die(); // kill view of the instance
 ```
 ```
-up(); // update view of the insance
+YouInstance.up(); // update view of the insance
 ```
 
 ## Author
 
 * **Ruslan Timurziyev**  - [Github](https://github.com/sawuer/)
 
-See also the list of [contributors](https://github.com/sawuer/ramona-js/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/sawuer/smells-like-js/contributors) who participated in this project.
 
 ## License
 

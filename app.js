@@ -1,7 +1,7 @@
 /*
  * App 
  * * * */
-var App = new Smells({
+var App = new SLJS({
 	
 	tmp: `
 		<Header></Header>
@@ -19,18 +19,10 @@ var App = new Smells({
 }, 'App');
 
 
-
-
-
-
-
-
-
 /*
  * Header 
  * * * * */
-
-var Header = new Smells({
+var Header = new SLJS({
 	
 	tmp: `	
 		<h1>Header</h1>
@@ -43,19 +35,10 @@ var Header = new Smells({
 }, 'Header');
 
 
-
-
-
-
-
-
-
-
 /*
  * PageOne 
  * * * * * */
-
-var PageOne = new Smells({
+var PageOne = new SLJS({
 	
 	tmp: `
 		<h1>Page1</h1>
@@ -68,21 +51,10 @@ var PageOne = new Smells({
 }, 'PageOne');
 
 
-
-
-
-
-
-
-
-
-
-
 /*
  * PageTwo 
  * * * * * */
-
-var PageTwo = new Smells({
+var PageTwo = new SLJS({
 	
 	tmp: `
 		<h1>Page2</h1>
@@ -95,20 +67,10 @@ var PageTwo = new Smells({
 }, 'PageTwo');
 
 
-
-
-
-
-
-
-
-
-
-
 /*
  * Toggler 
  * * * * * */
-var Toggler = new Smells({
+var Toggler = new SLJS({
 	
 	tmp: `
 		<button id="getPageOne">Page1</button>
@@ -118,7 +80,9 @@ var Toggler = new Smells({
 	model() {
 		var th = this;
 
-
+		PageOne.up();
+		PageTwo.die();
+		
 		th.route({
 			on: '#getPageOne', 
 			show: PageOne, 

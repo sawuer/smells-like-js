@@ -1,7 +1,10 @@
 /**
  * Smells Like JavaScript
+ * Author: Timurziyev Ruslan
+ * Link: https://github.com/sawuer/smells-like-js
  */
-class Smells {
+
+class SLJS {
 
 	constructor(opt, entry) {
 
@@ -9,11 +12,11 @@ class Smells {
 		 * Checking
 		 */
 		function err(text) {
-			throw new Error(text);
+			throw new TypeError(text);
 		}
 
 		if (!Object.keys(opt).length) {
-			err("Props of new Izy instance are does'nt exist");
+			err("Props of new SLJS instance are does'nt exist");
 		}
 
 		if (!entry) {
@@ -28,10 +31,9 @@ class Smells {
 			err("Model does'nt exist");
 		}
 
-
-		/* * * * * * * * * * * * * * 
-		 * CORE METHODS AND PROPS  *
-		 * * * * * * * * * * * * * */
+		/*
+		 * CORE METHODS AND PROPS  
+		 * * * * * * * * * * * * */
 
 		/** 
 		 * Inner method for getting into dom
@@ -63,10 +65,9 @@ class Smells {
 			opt.qry(where).innerHTML = what;
 		}
 
-		/* * * * * * * * * * * * * * *
-		 * PUBLIC METHODS AND PROPS  *
-		 * * * * * * * * * * * * * * */
-
+		/*
+		 * PUBLIC PROPS  
+		 * * * * * * * * * * * * * */
 		this.core = opt;
 		this.entry = entry;
 		this.entryDiv = opt.qry(entry);
@@ -80,11 +81,16 @@ class Smells {
 
 	}
 
-
+	/**
+	 * Clean tmp
+	 */
 	die() {
 		this.entryDiv.innerHTML = '';
 	}
 
+	/**
+	 * Up tmp
+	 */
 	up() {
 		this.entryDiv.innerHTML = this.core.tmp;
 	}
