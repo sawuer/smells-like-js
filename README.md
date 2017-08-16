@@ -1,12 +1,13 @@
 # Smells-like-js
-Just a simple js library for creating useful components which have own **view and model.**
+Just a simple js library for creating useful components which have only to main props: **view and model.**
 
 ## Getting Started
 
 1. Download or clone project copy
 2. Include smells-like.js to the top of your page
-3. Create div with id
+3. Create <App/>
 4. Then include js-file into bottom of the body
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +24,11 @@ Just a simple js library for creating useful components which have own **view an
 </body>
 </html>
 ```
+
 5. Add next code into js-file :
+
 ```
-// Main component
+// Main instance
 var App = new Smells({
   tmp: `
     // There is inner components
@@ -37,7 +40,7 @@ var App = new Smells({
 }, 'App');
 
 
-// Child component
+// Child instance
 var Header = new Smells({
   tmp: `  
     <h1>Header</h1>
@@ -51,27 +54,43 @@ var Header = new Smells({
 ```
 
 ## Docs
-
-* model() - all business logic of your component
-* tmp() - templates
-
+```
+model() // all business logic of your instance
+```
+```
+tmp();  // templates
+```
 ### Inner methods and props
 
-* this.qry(element); // instead of document.querySelector(-All)
-* this.route({ // route your components
+```
+this.qry(element); // instead of document.querySelector(-All)
+```
+```
+this.route({ // route your components
   on: '#linkClicking', 
   show: component1, 
   hide: component2, 
   path: 'addressName'
 });
+```
 
 ### Public methods and props
 
-* youInstance.core; // inners of instance
-* youInstance.entry; // entry element of instance
-* youInstance.entryDiv; // entry div of instance
-* die(); // kill view of the instance
-* up(); // update view of the insance
+```
+youInstance.core; // inners of instance
+```
+```
+youInstance.entry; // entry element of instance
+```
+```
+youInstance.entryDiv; // entry div of instance
+```
+```
+die(); // kill view of the instance
+```
+```
+up(); // update view of the insance
+```
 
 ## Author
 
