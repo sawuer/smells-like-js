@@ -13,10 +13,12 @@ Just a simple js library for creating useful components which have own **view an
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <script type="text/javascript" src="ramona.js"></script>
+  <script type="text/javascript" src="smells-like.js"></script>
 </head>
 <body>
-  <div id="myAppName"></div>
+
+  <App/>
+
   <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
@@ -55,8 +57,8 @@ var Header = new Smells({
 
 ### Inner methods and props
 
-this.qry(element); // instead of document.querySelector(-All)
-this.route({ // route your components
+* this.qry(element); // instead of document.querySelector(-All)
+* this.route({ // route your components
   on: '#linkClicking', 
   show: component1, 
   hide: component2, 
@@ -65,11 +67,11 @@ this.route({ // route your components
 
 ### Public methods and props
 
-youInstance.core; // inners of instance
-youInstance.entry; // entry element of instance
-youInstance.entryDiv; // entry div of instance
-die(); // kill view of the instance
-up(); // update view of the insance
+* youInstance.core; // inners of instance
+* youInstance.entry; // entry element of instance
+* youInstance.entryDiv; // entry div of instance
+* die(); // kill view of the instance
+* up(); // update view of the insance
 
 ## Author
 
